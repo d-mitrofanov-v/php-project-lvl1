@@ -26,7 +26,7 @@ function run(): void
     };
 
     $getAnswer = function ($num) {
-        return isPrime((int)$num);
+        return isPrime($num) ? 'yes' : 'no';
     };
 
     runEngine(GAME_DESCRIPTION, $getQuestionValue, $getAnswer);
