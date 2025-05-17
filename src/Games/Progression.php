@@ -26,16 +26,16 @@ function run(): void
 
     $getAnswer = function ($progression) {
         $numbers = explode(" ", $progression);
-        $hiddenIndex = array_search("..", $numbers, true);
+        $hiddenIndex = (int)array_search("..", $numbers, true);
         if ($hiddenIndex < 2) {
-            $num1 = (int)$numbers[2 + $hiddenIndex];
-            $num2 = (int)$numbers[1 + $hiddenIndex];
+            $num1 = (int)$numbers[$hiddenIndex + 2];
+            $num2 = (int)$numbers[$hiddenIndex + 1];
         } else {
             $num1 = (int)$numbers[$hiddenIndex - 1];
             $num2 = (int)$numbers[$hiddenIndex - 2];
         }
         $step = $num1 - $num2;
-        $answer = (int)$numbers[1 + $hiddenIndex] - $step;
+        $answer = (int)$numbers[$hiddenIndex + 1] - $step;
         return (string)$answer;
     };
 
