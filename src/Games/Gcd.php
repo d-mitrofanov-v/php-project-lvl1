@@ -19,8 +19,8 @@ function getGCD(int $a, int $b): int
 function run(): void
 {
     $getQuestionValue = function () {
-        $num1 = rand(1, 100);
-        $num2 = rand(1, 100);
+        $num1 = random_int(1, 100);
+        $num2 = random_int(1, 100);
         return "$num1 $num2";
     };
 

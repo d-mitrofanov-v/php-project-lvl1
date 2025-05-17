@@ -9,10 +9,10 @@ const GAME_DESCRIPTION = 'What number is missing in the progression?';
 function run(): void
 {
     $getQuestionValue = function () {
-        $num1 = rand(1, 50);
-        $progressionLen = rand(5, 11);
-        $progressionStep = rand(1, 20);
-        $indexToHide = rand(0, $progressionLen - 1);
+        $num1 = random_int(1, 50);
+        $progressionLen = random_int(5, 11);
+        $progressionStep = random_int(1, 20);
+        $indexToHide = random_int(0, $progressionLen - 1);
         $progression = [$num1];
 
         for ($i = 0; $i < $progressionLen; $i++) {
