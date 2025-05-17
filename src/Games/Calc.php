@@ -12,8 +12,8 @@ function run(): void
     $getQuestionValue = function () {
         $operators = ['+', '*', '-'];
 
-        $int1 = random_int(1, 50);
-        $int2 = random_int(1, 50);
+        $int1 = rand(1, 50);
+        $int2 = rand(1, 50);
         $key = array_rand($operators);
         $operator = $operators[$key];
 

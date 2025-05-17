@@ -22,7 +22,7 @@ function isPrime(int $num): bool
 function run(): void
 {
     $getQuestionValue = function () {
-        return random_int(1, 50);
+        return rand(1, 50);
     };
 
     $getAnswer = function ($num) {
