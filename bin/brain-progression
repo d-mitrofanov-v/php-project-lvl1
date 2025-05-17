@@ -10,8 +10,6 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-use function Hexlet\Code\greet;
-use function Hexlet\Code\runGame;
+use function Hexlet\Code\Games\Progression\run;
 
-$userName = greet();
-runGame('progression', $userName);
+run();
